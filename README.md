@@ -4,7 +4,7 @@
  * blood pressure diary
  * blood sugar diary
  * pulse diary
-
+ * etc.
  ---
 
 ![coffiction](img/Banner.svg)
