@@ -14,6 +14,7 @@
 
 ## system required
  [x] Linux
+ 
  [x] GTK2
 
 ## Checked on:
