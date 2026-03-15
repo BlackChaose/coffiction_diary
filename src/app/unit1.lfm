@@ -85,7 +85,6 @@ object MainForm: TMainForm
     Width = 100
     ItemHeight = 0
     TabOrder = 2
-    Text = 'cbDrinkType'
   end
   object edtCups: TEdit
     Left = 304
