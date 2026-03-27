@@ -17,7 +17,7 @@ type
     cbDrinkType: TComboBox;
     AD: TEdit;
     ChBox_AD_add: TCheckBox;
-    CheckBox1: TCheckBox;
+    chkGlukoza: TCheckBox;
     Glukoza: TEdit;
     edtDate: TDateEdit;
     edtCups: TEdit;
@@ -259,6 +259,7 @@ var
   cups: integer;
   cups_txt: string;
   drink_type: string;
+  glukoza_text: string;
 begin
   AssignFile(LogFile, DataFile);
 
@@ -272,6 +273,10 @@ begin
           ad_text:= 'Pressure:' + AD.Text
        else
          ad_text := '';
+       if((Glukoza.Text <> '') AND ( chkGlukoza.Checked = TRUE)) then
+           glukoza_text:= 'Glukoza:' + Glukoza.Text
+       else
+         glukoza_text := '';
        cups:= StrToInt(edtCups.Text);
        if (cups = 0) then
          begin
@@ -283,12 +288,13 @@ begin
            cups_txt := edtCups.Text;
            drink_type := cbDrinkType.Text;
          end;
-    LogLine := Format('[%s %s] : %s %s %s',
+    LogLine := Format('[%s %s] : %s %s %s %s',
       [FormatDateTime('DD-MM-YYYY', edtDate.Date),
        FormatDateTime('HH:NN', edtTime.Time),
        cups_txt,
        drink_type,
-       ad_text]);
+       ad_text,
+       glukoza_text]);
 
     WriteLn(LogFile, LogLine);
     MemoLog.Lines.Add(LogLine);

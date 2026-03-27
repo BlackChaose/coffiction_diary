@@ -35,7 +35,7 @@ LazarusResources.Add('TMainForm','FORMDATA',[
   +#2#17#3'Top'#3'^'#1#5'Width'#3#186#0#7'Caption'#6#31'coffiction diary by Hex'
   +'NIK 2026'#5'Color'#7#7'clGreen'#11'ParentColor'#8#0#0#9'TCheckBox'#12'ChBox'
   +'_AD_add'#4'Left'#3'`'#1#6'Height'#2#24#3'Top'#3#160#0#5'Width'#2'V'#7'Capti'
-  +'on'#6#10'add to log'#8'TabOrder'#2#8#0#0#9'TCheckBox'#9'CheckBox1'#4'Left'#3
-  +'`'#1#6'Height'#2#24#3'Top'#3#216#0#5'Width'#2'['#7'Caption'#6#9'CheckBox1'#8
-  +'TabOrder'#2#9#0#0#0
+  +'on'#6#10'add to log'#8'TabOrder'#2#8#0#0#9'TCheckBox'#10'chkGlukoza'#4'Left'
+  +#3'`'#1#6'Height'#2#24#3'Top'#3#216#0#5'Width'#2'V'#7'Caption'#6#10'add to l'
+  +'og'#8'TabOrder'#2#9#0#0#0
 ]);

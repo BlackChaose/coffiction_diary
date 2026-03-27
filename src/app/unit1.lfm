@@ -157,12 +157,12 @@ object MainForm: TMainForm
     Caption = 'add to log'
     TabOrder = 8
   end
-  object CheckBox1: TCheckBox
+  object chkGlukoza: TCheckBox
     Left = 352
     Height = 24
     Top = 216
-    Width = 91
-    Caption = 'CheckBox1'
+    Width = 86
+    Caption = 'add to log'
     TabOrder = 9
   end
 end
