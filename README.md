@@ -1,14 +1,26 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # coffiction_diary
+
+### version 0.1.18
  
 - [x] caffeine addiction diary
  
 - [x] blood pressure diary
  
-- [ ] blood sugar diary
+- [x] blood sugar diary
  
-- [ ] pulse diary
+- [x] pulse diary
+
+- [ ] show table of records
+
+- [ ] Charts
  
+- [ ] Save log records to sqlite
+
+- [ ] Synhorinization with server
+
+- [ ] Added Android version
+
 - [ ] etc.
  
  ---
