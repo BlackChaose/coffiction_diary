@@ -17,7 +17,9 @@ type
     cbDrinkType: TComboBox;
     AD: TEdit;
     ChBox_AD_add: TCheckBox;
+    chkPulse: TCheckBox;
     chkGlukoza: TCheckBox;
+    Pulse: TEdit;
     Glukoza: TEdit;
     edtDate: TDateEdit;
     edtCups: TEdit;
@@ -28,6 +30,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     MemoLog: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -260,6 +263,7 @@ var
   cups_txt: string;
   drink_type: string;
   glukoza_text: string;
+  pulse_text: string;
 begin
   AssignFile(LogFile, DataFile);
 
@@ -277,7 +281,14 @@ begin
            glukoza_text:= 'Glukoza:' + Glukoza.Text
        else
          glukoza_text := '';
+
+       if((Pulse.Text <> '') AND ( chkPulse.Checked = TRUE)) then
+           pulse_text:= 'Pulse: ' + Pulse.Text
+       else
+         pulse_text := '';
+
        cups:= StrToInt(edtCups.Text);
+
        if (cups = 0) then
          begin
            cups_txt := '';
@@ -288,13 +299,14 @@ begin
            cups_txt := edtCups.Text;
            drink_type := cbDrinkType.Text;
          end;
-    LogLine := Format('[%s %s] : %s %s %s %s',
+    LogLine := Format('[%s %s] : %s %s %s %s %s',
       [FormatDateTime('DD-MM-YYYY', edtDate.Date),
        FormatDateTime('HH:NN', edtTime.Time),
        cups_txt,
        drink_type,
        ad_text,
-       glukoza_text]);
+       glukoza_text,
+       pulse_text]);
 
     WriteLn(LogFile, LogLine);
     MemoLog.Lines.Add(LogLine);
@@ -302,8 +314,15 @@ begin
     CloseFile(LogFile);
   end;
 
-  edtCups.Text := '';
+  edtCups.Text := '0';
   edtCups.SetFocus;
+  Ad.Text := '';
+  Glukoza.Text := '';
+  Pulse.Text := '';
+  ChBox_AD_add.Checked := FALSE;
+  chkGlukoza.Checked := FALSE;
+  chkPulse.Checked := FALSE;
+
 end;
 
 

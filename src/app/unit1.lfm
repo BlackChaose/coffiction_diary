@@ -33,10 +33,10 @@ object MainForm: TMainForm
   end
   object Panel1: TPanel
     Left = 448
-    Height = 256
+    Height = 304
     Top = 0
     Width = 114
-    ClientHeight = 256
+    ClientHeight = 304
     ClientWidth = 114
     TabOrder = 6
     object Label3: TLabel
@@ -47,7 +47,7 @@ object MainForm: TMainForm
       Caption = 'Type of Drink'
     end
     object Label4: TLabel
-      Left = 16
+      Left = 11
       Height = 17
       Top = 88
       Width = 30
@@ -71,16 +71,30 @@ object MainForm: TMainForm
     object Glukoza: TEdit
       Left = 8
       Height = 28
-      Top = 208
+      Top = 264
       Width = 96
       TabOrder = 1
     end
     object Label7: TLabel
       Left = 11
       Height = 17
-      Top = 192
+      Top = 248
       Width = 48
       Caption = 'Glukoza'
+    end
+    object Pulse: TEdit
+      Left = 11
+      Height = 28
+      Top = 216
+      Width = 93
+      TabOrder = 2
+    end
+    object Label8: TLabel
+      Left = 11
+      Height = 17
+      Top = 200
+      Width = 32
+      Caption = 'Pulse'
     end
   end
   object edtDate: TDateEdit
@@ -160,9 +174,17 @@ object MainForm: TMainForm
   object chkGlukoza: TCheckBox
     Left = 352
     Height = 24
-    Top = 216
+    Top = 272
     Width = 86
     Caption = 'add to log'
     TabOrder = 9
+  end
+  object chkPulse: TCheckBox
+    Left = 352
+    Height = 24
+    Top = 216
+    Width = 86
+    Caption = 'add to log'
+    TabOrder = 10
   end
 end
